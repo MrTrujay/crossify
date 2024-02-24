@@ -20,7 +20,8 @@
     "prepare": "husky",
     "commitlint": "npx --no-install commitlint --edit",
     "postinstall": "npx husky",
-    "release": "standard-version"
+    "release": "standard-version",
+    "prerelease": "standard-version --prerelease alpha"
   },
   "lint-staged": {
     "src/**/*.{ts,js}": "eslint"
@@ -60,5 +61,8 @@
   },
   "dependencies": {
     "standard-version": "^9.5.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
