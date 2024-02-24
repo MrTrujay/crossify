@@ -4,11 +4,18 @@
   "description": "",
   "main": "dist/lib/index.js",
   "module": "dist/umd/index.js",
+  "files": [
+    "/dist",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:cjs": "rollup -c config/rollup.config.js",
     "build:umd": "rollup -c config/rollup.config.umd.js",
     "build": "yarn build:cjs && yarn build:umd",
+    "dev": "rollup -w -c config/rollup.config.umd.js",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src/",
     "prepare": "husky",
     "commitlint": "npx --no-install commitlint --edit",
@@ -18,9 +25,15 @@
   "lint-staged": {
     "src/**/*.{ts,js}": "eslint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "table",
+    "cross table",
+    "pivot table",
+    "data transform",
+    "visualization"
+  ],
+  "author": "MrTrujay",
+  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^18.6.0",
     "@commitlint/config-conventional": "^18.6.0",

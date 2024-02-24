@@ -8,7 +8,7 @@ module.exports = {
   output: {
     file: "dist/umd/index.js",
     format: "umd",
-    name: "CrossTable",
+    name: "crossify",
   },
   plugins: [
     cleaner({
